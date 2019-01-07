@@ -1,14 +1,63 @@
 package com.yitong.gmall.user.bean;
 
-public class UserInfo {
+import org.apache.ibatis.type.Alias;
+
+import javax.persistence.Column;
+import javax.persistence.Table;
+import java.io.Serializable;
+
+@Table(name = "user_info")
+@Alias(value = "userInfo")
+public class UserInfo implements Serializable{
+    private static final long serialVersionUID = 5465775492730080699L;
+    /**
+     * 用户ID
+     */
     private String id;
+
+    /**
+     * 用户账号
+     */
+    @Column(name = "login_name")
     private String loginName;
+
+    /**
+     * 用户昵称
+     */
+    @Column(name = "nick_name")
     private String nickName;
+
+    /**
+     * 用户密码
+     */
     private String passwd;
+
+    /**
+     * 用户姓名
+     */
     private String name;
+
+    /**
+     * 用户手机号码
+     */
+    @Column(name = "phone_num")
     private String phoneNum;
+
+    /**
+     * 用户邮箱
+     */
     private String email;
+
+    /**
+     * 用户头像
+     */
+    @Column(name = "head_img")
     private String headImg;
+
+    /**
+     * 用户等级
+     */
+    @Column(name = "user_level")
     private String userLevel;
 
     public UserInfo() {

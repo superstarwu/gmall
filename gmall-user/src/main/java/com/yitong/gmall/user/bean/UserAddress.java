@@ -1,11 +1,47 @@
 package com.yitong.gmall.user.bean;
 
-public class UserAddress {
+import org.apache.ibatis.type.Alias;
+
+import javax.persistence.Column;
+import javax.persistence.Table;
+import java.io.Serializable;
+
+@Table(name = "user_address")
+@Alias(value = "userAddress")
+public class UserAddress implements Serializable{
+    private static final long serialVersionUID = -4598936929315554832L;
+    /**
+     * 用户地址ID
+     */
     private String id;
+
+    /**
+     * 用户收货地址
+     */
+    @Column(name = "user_address")
     private String userAddress;
+
+    /**
+     * 用户ID
+     */
+    @Column(name = "user_id")
     private String userId;
+
+    /**
+     * 收件人
+     */
     private String consignee;
+
+    /**
+     * 联系方式
+     */
+    @Column(name = "phone_num")
     private String phoneNum;
+
+    /**
+     * 是否启用
+     */
+    @Column(name = "is_default")
     private Boolean isDefault;
 
     public UserAddress() {
