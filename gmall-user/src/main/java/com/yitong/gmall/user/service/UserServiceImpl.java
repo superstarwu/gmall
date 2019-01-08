@@ -1,16 +1,18 @@
-package com.yitong.gmall.user.service.impl;
+package com.yitong.gmall.user.service;
 
-import com.yitong.gmall.user.bean.UserAddress;
-import com.yitong.gmall.user.bean.UserInfo;
+import com.yitong.gmall.bean.UserAddress;
+import com.yitong.gmall.bean.UserInfo;
+import com.yitong.gmall.service.UserService;
 import com.yitong.gmall.user.mapper.UserAddressMapper;
 import com.yitong.gmall.user.mapper.UserInfoMapper;
-import com.yitong.gmall.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
+@Transactional(rollbackFor = Exception.class)
 public class UserServiceImpl implements UserService {
 
     @Autowired

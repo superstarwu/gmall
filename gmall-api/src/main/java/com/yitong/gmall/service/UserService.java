@@ -1,7 +1,8 @@
-package com.yitong.gmall.user.service;
+package com.yitong.gmall.service;
 
-import com.yitong.gmall.user.bean.UserAddress;
-import com.yitong.gmall.user.bean.UserInfo;
+
+import com.yitong.gmall.bean.UserAddress;
+import com.yitong.gmall.bean.UserInfo;
 
 import java.util.List;
 

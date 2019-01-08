@@ -1,4 +1,4 @@
-package com.yitong.gmall.user.bean;
+package com.yitong.gmall.bean;
 
 import org.apache.ibatis.type.Alias;
 
